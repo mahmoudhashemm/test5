@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # ── المدخلات البسيطة فقط ──
-read -p "📛 اسم الـ client      : " NAME
-read -p "🌐 البورت الخارجي     : " PORT
-read -p "💬 بورت الـ chat       : " CHAT
+read -p "📛 اسم الـ client      : " NAME </dev/tty
+read -p "🌐 البورت الخارجي     : " PORT </dev/tty
+read -p "💬 بورت الـ chat       : " CHAT </dev/tty
 
 # ── بيلاقي أول /29 فاضي تلقائياً ──
 USED=$(docker network inspect $(docker network ls -q) \
@@ -41,7 +41,7 @@ echo "   Gateway : $GW"
 echo "   Odoo IP : $ODOO_IP"
 echo "   DB IP   : $DB_IP"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-read -p "تكمل؟ (y/n): " CONFIRM
+read -p "تكمل؟ (y/n): " CONFIRM </dev/tty
 [ "$CONFIRM" != "y" ] && exit 0
 
 # ── تشغيل ──
