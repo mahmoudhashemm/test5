@@ -1,0 +1,22 @@
+# Sensitive files - DO NOT COMMIT
+.env
+etc/odoo.conf
+
+# Database data
+postgresql/
+
+# Logs
+*.log
+etc/*.log
+
+# Enterprise addons (licensed)
+enterprise/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
