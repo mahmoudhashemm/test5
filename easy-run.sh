@@ -45,5 +45,5 @@ read -p "تكمل؟ (y/n): " CONFIRM </dev/tty
 [ "$CONFIRM" != "y" ] && exit 0
 
 # ── تشغيل ──
-curl -s https://raw.githubusercontent.com/mahmoudhashemm/odoo-19-N/main/run.sh \
+curl -s https://raw.githubusercontent.com/mahmoudhashemm/test5/main/run.sh \
   | sudo bash -s "$NAME" "$PORT" "$CHAT" 8069 8072 "$SUBNET" "$GW" "$ODOO_IP" "$DB_IP" "$NAME"
