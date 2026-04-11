@@ -22,7 +22,7 @@ services:
         ipv4_address: 172.28.10.3
 
   odoo17:
-    image: mahmoudhashemm/odoo-19:003
+    image: odoo:19.0
     depends_on:
       db:
         condition: service_healthy
